@@ -10,6 +10,8 @@ Author URI: https://uprise.ro
 Author Email: eduard@uprise.ro
 */
 
+//@todo: check if WC is active
+
 //hooking into WP event
 add_action( 'before_delete_post', 'wc_delete_product_images', 10, 1 );
 
@@ -38,3 +40,4 @@ function wc_delete_product_images( $post_id ) {
 		}
 	}
 }
+//@todo: create config for multiple CPTs
