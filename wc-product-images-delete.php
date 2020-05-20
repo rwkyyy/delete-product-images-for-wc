@@ -6,7 +6,6 @@ Plugin URI: https://uprise.ro
 Description: Removes product assigned images (featured and gallery only) on product delete.
 Version: 1.0
 Author: Eduard V. Doloc
-Author URI: https://uprise.ro
 Author Email: eduard@uprise.ro
 */
 
