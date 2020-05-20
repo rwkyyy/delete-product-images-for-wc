@@ -1,0 +1,1 @@
+# wc-product-images-delete
