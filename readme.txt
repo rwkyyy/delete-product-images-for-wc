@@ -1,4 +1,4 @@
-=== WC Delete Product Images ===
+=== DDelete product images for WooCommerce ===
 Contributors: rwky
 Donate link: https://www.paypal.me/eduardvd
 Tags: product images delete, woocommerce product images delete, woocomemrce product images remove, product images remove, remove product images automatically, woocommerce product images, product images
@@ -15,7 +15,7 @@ This small and lightweight plugin deletes all product images automatically when 
 
 The plugin uses the "before_delete_post" action and runs a delete (wp_delete_post) for the product ID that is being deleted, this is done automatically and works with any number of products.
 
-Contributions are welcomed on `https://github.com/rwkyyy/wc-product-images-delete`
+Contributions are welcomed on `https://github.com/rwkyyy/delete-product-images-for-wc`
 
 == Installation ==
 1. Download the plugin
@@ -29,8 +29,6 @@ Yes, it should work with any type of product (CPT).
 = Can you make it work with more CPTs? =
 To be honest, I did not found the motivation in putting the work for making the plugin compatible with any CPT, but if I see interest in this plugin I'll do that in time, or if you want to submit the update/any other updates yourself, just make a pull on Github and I'll update it here.
 
-== Screenshots ==
-1. /assets/screenshot-1.png
 
 == Changelog ==
 = 1.0 =
