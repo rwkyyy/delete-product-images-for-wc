@@ -1,8 +1,9 @@
-=== DDelete product images for WooCommerce ===
+=== Delete product images for WooCommerce ===
 Contributors: rwky
 Donate link: https://www.paypal.me/eduardvd
-Tags: product images delete, woocommerce product images delete, woocomemrce product images remove, product images remove, remove product images automatically, woocommerce product images, product images
-Requires at least: 2.6
+Tags: product images delete, woocommerce product images delete, woocommerce product images remove, product images remove, remove product images automatically, woocommerce product images, product images
+Requires at least: 4.7
+Requires PHP: 7.0
 Tested up to: 5.4
 Stable tag: trunk
 License: GPLv3 or later
