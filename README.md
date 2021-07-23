@@ -1,4 +1,7 @@
+[![WP compatibility](https://plugintests.com/plugins/wporg/wc-delete-product-images/wp-badge.svg)](https://plugintests.com/plugins/wporg/wc-delete-product-images/latest) [![PHP compatibility](https://plugintests.com/plugins/wporg/wc-delete-product-images/php-badge.svg)](https://plugintests.com/plugins/wporg/wc-delete-product-images/latest)
+
 This small and lightweight plugin deletes all product images automatically when the product is deleted (from trash).
+
 # Delete product images for WooCommerce
 
 The plugin uses the "before_delete_post" action and runs a delete (wp_delete_post) for the product ID that is being deleted, this is done automatically and works with any number of products.
