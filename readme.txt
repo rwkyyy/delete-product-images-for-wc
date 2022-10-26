@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/eduardvd
 Tags: product images delete, woocommerce product images delete, woocommerce product images remove, product images remove, remove product images automatically, woocommerce product images, product images
 Requires at least: 4.7
 Requires PHP: 7.0
-Tested up to: 5.4
+Tested up to: 6.0.3
 Stable tag: trunk
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
