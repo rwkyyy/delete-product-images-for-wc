@@ -4,7 +4,7 @@ Plugin Name: Delete product images for WooCommerce
 Plugin URI: https://uprise.ro
 Description: Removes product assigned images (featured and gallery only) on product delete.
 Requires at least: 4.7
-Tested up to: 5.4
+Tested up to: 6.5.2
 Stable tag: trunk
 Requires PHP: 7.0
 Version: 1.1
