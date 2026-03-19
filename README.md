@@ -2,25 +2,77 @@
 
 This small and lightweight plugin deletes all product images automatically when the product is deleted (from trash).
 
-# Delete product images for WooCommerce
+# Delete Product Images for WooCommerce
 
-The plugin uses the "before_delete_post" action and runs a delete (wp_delete_post) for the product ID that is being deleted, this is done automatically and works with any number of products.
+Safely deletes WooCommerce product images (featured, gallery, variations) on permanent delete, with protection for shared images.
 
-Contributions are welcomed on `https://github.com/rwkyyy/delete-product-images-for-wc`
+---
 
-Plugin is based on:
-`https://stackoverflow.com/a/45998408/5317637`
+## 🧩 Description
 
-**Installation:**
+Automatically deletes all images associated with a WooCommerce product when the product is permanently deleted from the Trash.
 
-1. Download  the plugin
+The plugin includes multiple safety mechanisms to ensure that shared images are never removed if they are used by other active products.
 
-2. Upload it to your site (if you've installed it through Wordpress Dashboard skip this step)
+---
 
-3. Activate
+## 🚀 Features
 
-4. Enjoy!
+### 🖼 Image Handling
+- Deletes:
+  - Featured images
+  - Gallery images
+  - Variation images
 
-**Notes:** 
+### 🔒 Safe Execution
+- Runs **only on permanent delete**
+- Does **NOT** trigger when moving products to Trash
 
-This plugin relies on WordPress "before_delete_post" action, if that action is disabled the plugin won't work.
+### 🧠 Smart Protection
+- Skips images used by other active products
+- Ignores products already in Trash
+
+### ⚙️ Partial Deletion
+- Deletes only unused images
+- Keeps shared images intact
+
+### 📦 Bulk Safe
+- Works with bulk delete
+- Works with **Empty Trash**
+
+### 📝 Logging
+- Full WooCommerce logger integration
+- Tracks every step for debugging
+
+### 🧭 Admin Control
+- Toggle image deletion ON/OFF from the WordPress admin bar
+
+---
+
+## ⚠️ Notes
+
+- The plugin is designed to be safe by default.
+- If an image is detected as being used elsewhere, it will **not** be deleted.
+- Ideal for stores with frequent imports or cleanup needs.
+
+---
+
+## 📦 Installation
+
+1. Download the plugin
+2. Upload it to your site (skip if installing via WP Dashboard)
+3. Activate the plugin
+4. Done
+
+---
+
+## ❓ FAQ
+
+### Will this work with any product?
+Yes, it supports all WooCommerce product types:
+- Simple
+- Variable
+- Variations
+
+### Where can I see it working?
+Check WooCommerce logs:

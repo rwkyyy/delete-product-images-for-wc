@@ -4,17 +4,50 @@ Donate link: https://www.paypal.me/eduardvd
 Tags: product images delete, woocommerce product images delete, woocommerce product images remove, product images remove, remove product images automatically
 Requires at least: 4.7
 Requires PHP: 7.0
-Tested up to: 6.5.2
-Stable tag: trunk
+Tested up to: 6.9.4
+Stable tag: 3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Removes product assigned images (featured and gallery only) on product delete.
+Safely deletes WooCommerce product images (featured, gallery, variations) on permanent delete, with protection for shared images.
 
 == Description ==
-This small and lightweight plugin deletes all product images automatically when the product is deleted (from trash).
+Automatically deletes all images associated with a WooCommerce product when the product is permanently deleted from the Trash.
 
-The plugin uses the "before_delete_post" action and runs a delete (wp_delete_post) for the product ID that is being deleted, this is done automatically and works with any number of products (server performance limited)
+The plugin includes multiple safety mechanisms to ensure that shared images are never removed if they are used by other active products.
+
+== Features ==
+
+- Deletes:
+  - Featured images
+  - Gallery images
+  - Variation images
+
+- Runs only on permanent delete:
+  - Does NOT trigger when moving products to Trash
+
+- Smart protection:
+  - Skips images used by other active products
+  - Ignores products already in Trash
+
+- Partial deletion support:
+  - Deletes only unused images
+  - Keeps shared images intact
+
+- Bulk-safe:
+  - Works with bulk delete and "Empty Trash"
+
+- Logging:
+  - Full WooCommerce logger integration
+  - Tracks every step for debugging
+
+- Admin control:
+  - Toggle image deletion ON/OFF from the WordPress admin bar
+
+== Notes ==
+
+- The plugin is designed to be safe by default. If an image is detected as being used elsewhere, it will not be deleted.
+- Best suited for stores with frequent product imports/cleanup where media clutter can become an issue.
 
 Contributions are welcomed on `https://github.com/rwkyyy/delete-product-images-for-wc`
 
@@ -27,7 +60,7 @@ Contributions are welcomed on `https://github.com/rwkyyy/delete-product-images-f
 
 == Frequently Asked Questions ==
 = Will this work with any product? =
-Yes, it should work with any type of product (CPT).
+Yes, it supports all WooCommerce product types, including simple, variable, and variations.
 = Where can I see it working? =
 Please check the default WooCommerce logs (Woo > Status > Logs)
 = Can you make it work with more CPTs? =
@@ -35,6 +68,17 @@ To be honest, I did not found the motivation in putting the work for making the 
 
 
 == Changelog ==
+= 3.0 =
+* Added support for variation images
+* Implemented shared image protection (prevents deleting images used by other products)
+* Fixed deletion logic to work only on permanent delete (not on move to trash)
+* Rework support for bulk delete on empty trash
+* Added admin bar toggle to enable/disable image deletion
+* Improved logging with detailed step-by-step tracking (WC Logger)
+* Improved database queries to ignore trashed products
+* Fixed multiple edge cases and improved overall reliability
+* Performance improvements (100 simple products in < 10 seconds)
+
 = 2.0 =
 * rewrote plugin logic for better handling of both database and filesystem
 * implemented multiple safeguards and error-checking
